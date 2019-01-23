@@ -13,7 +13,7 @@ public class Servlet141 extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html; charset=utf-8");
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 9; i++) {
             response.getWriter().append("<a href=\"/Servlet142")
                     .append("?id=")
                     .append(String.valueOf(i))

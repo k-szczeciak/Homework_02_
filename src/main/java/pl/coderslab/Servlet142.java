@@ -24,6 +24,15 @@ public class Servlet142 extends HttpServlet {
 
         String id = request.getParameter("id");
         int idInt = Integer.parseInt(id);
-        response.getWriter().append(products[idInt]);
+        if(idInt <= 7 ){
+            String[] line = products[idInt].replaceAll("'", "").split(";");
+
+            response.getWriter().append(line[0])
+            .append(" - ")
+            .append(line[1])
+            .append(" zł");
+        }else{
+            response.getWriter().append("product not found");
+        }
     }
 }
